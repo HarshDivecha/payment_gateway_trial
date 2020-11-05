@@ -63,7 +63,7 @@ class _DummyHomepageState extends State<DummyHomepage> {
         },
         body: jsonEncode(<String, String>{
           "orderId":orderId,
-          "orderCurrency":"inr",
+          "orderCurrency":"INR",
           "orderAmount":amount,
         }),
       ).then( (response){
@@ -76,9 +76,9 @@ class _DummyHomepageState extends State<DummyHomepage> {
     return token;
   }
 
-  void pay(){
+  void pay()async{
     String token;
-    generateToken("123", "300").then((value) => token=value);
+   await generateToken("123", "300").then((value) => token=value);
     if(token!=null) {
       String stage = "TEST";
       String orderId = "123";

@@ -23,7 +23,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cashfree_pg: 0.0.4+9
+  cashfree_pg: ^0.0.4+9
   http: ^0.12.2
 
 
